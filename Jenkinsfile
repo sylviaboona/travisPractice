@@ -4,12 +4,14 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building....'
+        sh 'npm install'
       }
     }
 
-    stage('Best') {
+    stage('Test') {
       steps {
         echo 'Testing....'
+          sh 'npm test'
       }
     }
 
